@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #171717;
-  --foreground: #ffffff;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #0a0a0a;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.auth_screen {
+  overflow-y: auto;
+  background-image: url(../public/images/background-image.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 1300px;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.auth_screen .header {
+  width: 100%;
+}
+
+.register_card {
+  background-color: #092653; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#13808C, #092653);
+}
+
+.register_card {
+  padding: 30px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 30px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register_card h5 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.register_card h2 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.register_card p {
+  font-size: 17px;
+  font-weight: 400;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.register_card a {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #13808C;
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form_section {
+  display: flex;
+}
+
+.text_section {
+  width: 50%;
+}
+
+.form {
+  width: 50%;
+}
+
+.text_section h2 {
+  font-size: 102px;
+  font-weight: bold;
+}
+
+.text_section p {
+  font-size: 24px;
+  width: 84%;
+}
+
+.login_text_section p {
+    margin-top: 60px;
+}
+
+a.login_button {
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    top: 20px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 767px) {
+  .register_type_cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20px;
+  } 
 }
